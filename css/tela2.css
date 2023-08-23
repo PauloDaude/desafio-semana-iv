@@ -1,0 +1,256 @@
+:root {
+  --font-size-h1: 53px;
+  --font-size-h2: 30px;
+  --font-size-h3: 1rem;
+  --font-size-btn: 1rem;
+  --font-size-content: 1rem;
+
+  --font-weight-title: 700;
+  --font-weight-content: 400;
+
+  --color-text: #000000;
+  --color-btn-text: #fff;
+  --color-primary: rgb(62, 178, 94);
+  --color-secundary: rgba(62, 178, 94, 0.3);
+  --color-tertiary: rgba(0, 0, 0, 0.25);
+
+  --radius-btn: 50%;
+  --radius-toggle-options: 20px;
+  --radius-text-area: 20px;
+  --radius-select-box: 2px;
+
+  --line-height-h2: normal;
+  --line-height-h3: normal;
+  --line-height-btn: normal;
+  --line-height-content: 18.75px;
+  --line-height-p: 21.09px;
+}
+
+/* ---------- TAG SELECTOR ---------- */
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-title);
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: normal;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+p {
+  font-size: var(--font-size-content);
+  font-weight: var(--font-weight-content);
+  line-height: var(--line-height-p);
+  color: var(--color-text)
+}
+
+button {
+  font-size: var(--font-size-btn);
+  font-weight: var(--font-weight-title);
+  color: var(--color-btn-text);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-btn);
+  width: 142px;
+  height: 26px;
+}
+
+textarea {
+  width: 278px;
+  height: 131px;
+  overflow: hidden;
+  background-color: transparent;
+  border: 1px solid var(--color-tertiary);
+}
+
+label {
+  font-size: var(--font-size-content);
+  color: var(--color-text);
+  line-height: var(--line-height-content);
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid var(--color-tertiary);
+}
+
+/* ---------- /TAG SELECTOR ---------- */
+
+
+/* ---------- CLASS SELECTOR ---------- */
+.main {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+ .section-up {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+ }
+
+ .img2 {
+  width: 56.4583%;
+  height: 54.7368%;
+  position: relative;
+  right: 8vw;
+  padding-top: 56px;
+  flex-shrink: 0;
+} 
+
+.section-down {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px;
+}
+
+.section-down .text-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-down .btn-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.text-box h2 {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  line-height: normal;
+  text-align: center;
+}
+
+.btn-box button {
+  width: 199px;
+  height: 36px;
+  margin-top: 36px;
+  border-radius: 35px;
+  font-size: 22px;
+} 
+
+/* ---------- /CLASS SELECTOR ---------- */
+
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .img1 {
+    width: 36%;
+    position: relative;
+    right: 5vw;
+    padding-top: 42px;
+  } 
+
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+  :root {
+    --font-size-h1: 111px;
+    --font-size-h2: 39px;
+  }
+
+  html {
+    font-size: 26px;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1500px;
+    height: 100%;
+    padding: 51px 84px 48px 212px;
+    margin: auto;
+  }
+
+  .section-up {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 5vw;
+   }
+
+   .img1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 0;
+    padding: 0px;
+    flex-shrink: 0;
+  }
+
+  .section-down {
+    width: 55%;
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .text-welcome{
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .text-welcome h1 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 106px;
+  }
+
+  .text-welcome h2 {
+    font-size: 29px;
+    margin-top: 44px;
+    line-height: normal;
+  }
+
+  .btn-welcome button {
+    width: 41.4583%;
+    height: 36px;
+    margin-top: 66px;
+    border-radius: 35px;
+    font-size: 22px;
+  } 
+}
