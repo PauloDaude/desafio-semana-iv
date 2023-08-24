@@ -10,11 +10,12 @@
 
   --color-text: #000000;
   --color-btn-text: #fff;
+  --color-btn-hover: #2ec959;
   --color-primary: rgb(62, 178, 94);
   --color-secundary: rgba(62, 178, 94, 0.3);
   --color-tertiary: rgba(0, 0, 0, 0.25);
 
-  --radius-btn: 50%;
+  --radius-btn: 35px;
   --radius-toggle-options: 20px;
   --radius-text-area: 20px;
   --radius-select-box: 2px;
@@ -74,8 +75,14 @@ button {
   color: var(--color-btn-text);
   background-color: var(--color-primary);
   border-radius: var(--radius-btn);
-  width: 142px;
-  height: 26px;
+  width: 199px;
+  height: 36px;
+  transition: all .2s ease;
+}
+
+button:hover {
+  background-color: var(--color-btn-hover);
+  transition: all .2s ease;
 }
 
 textarea {
@@ -161,10 +168,7 @@ input {
 }
 
 .btn-welcome button {
-  width: 199px;
-  height: 36px;
   margin-top: 36px;
-  border-radius: 35px;
   font-size: 22px;
 } 
 
