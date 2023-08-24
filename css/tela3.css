@@ -25,7 +25,9 @@
   --line-height-h3: normal;
   --line-height-btn: normal;
   --line-height-content: 18.75px;
-  --line-height-p: 21.09px;
+  --line-height-p: normal;
+
+  --width-height-ratio: 15px;
 }
 
 /* ---------- TAG SELECTOR ---------- */
@@ -76,14 +78,51 @@ button {
   color: var(--color-btn-text);
   background-color: var(--color-primary);
   border-radius: var(--radius-btn);
-  width: 199px;
-  height: 36px;
+  width: 29.5833vw;
+  height: 26px;
   transition: all .2s ease;
 }
 
 button:hover {
   background-color: var(--color-btn-hover);
   color: var(--color-btn-text-hover);
+  transition: all .2s ease;
+}
+
+select {
+  position: relative;
+  right: 8px;
+  background-image: url(../assets/svg/arrow.svg);
+  background-position: left 10px center;
+  background-repeat: no-repeat;
+  border: 1px solid var(--color-tertiary);
+  border-radius: 20px;
+  padding: 5px 10px 5px 25px;
+  margin: 3px;
+  font-size: var(--font-size-content);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+
+select option {
+  font-size: var(--font-size-content);
+}
+
+input[type="radio"] {
+  background-color: var(--color-secundary);
+  border: none;
+  border-radius: 50%;
+  width: var(--width-height-ratio);
+  height: var(--width-height-ratio);
+  vertical-align: middle;
+  transition: all .2s ease;
+  margin-right: 2px;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--color-primary);
   transition: all .2s ease;
 }
 
@@ -123,56 +162,78 @@ input {
   justify-content: center;
  }
 
- .img1 {
-  width: 56.4583%;
-  height: 54.7368%;
-  position: relative;
-  right: 8vw;
-  padding-top: 56px;
+ .img3 {
+  width: 75%;
+  height: 45.2631%;
+  padding-top: 61px;
   flex-shrink: 0;
 } 
 
 .section-down {
   box-sizing: border-box;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20.96px 18vw;
+}
+
+.section-down .text-header {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.section-down .text-box {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.section-down .choice-box{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.section-down .choice-box label{
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 21px;
+  font-size: var(--font-size-content);
+}
+
+.section-down .btn-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 24px;
+  gap: 10px;
 }
 
-.section-down .text-welcome {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.section-down .btn-box button:nth-child(-n+2) {
+  width: 47%;
 }
 
-.section-down .btn-welcome {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.text-welcome h1 {
-  text-align: center;
+.section-down .btn-box .skip {
   width: 100%;
 }
 
-.text-welcome h2 {
-  font-size: 1.5rem;
-  margin-top: 25px;
+.text-box h2 {
+  font-size: var(--font-size-h2);
+  margin-top: 27.88px;
   line-height: normal;
   text-align: center;
 }
-
-.btn-welcome button {
-  margin-top: 36px;
-  font-size: 22px;
-} 
 
 /* ---------- /CLASS SELECTOR ---------- */
 
@@ -180,20 +241,34 @@ input {
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
 
-  .img1 {
-    width: 36%;
+  html {
+    font-size: 20px;
+  }
+
+  .img3 {
     position: relative;
-    right: 5vw;
-    padding-top: 42px;
+    right: 8vw;
+    width: 50%;
   } 
+
+  .section-down .btn-box button {
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .section-down .choice-box label{
+    line-height: 26px;
+  }
 
 }
 
 /* DESKTOP */
 @media (min-width: 1200px) {
   :root {
-    --font-size-h1: 111px;
-    --font-size-h2: 39px;
+    --font-size-h3: 1rem;
+    --font-size-content: 1rem;
+    --font-size-btn: 22px;
+    --width-height-ratio: 25px;
   }
 
   html {
@@ -207,56 +282,74 @@ input {
     width: 100%;
     max-width: 1500px;
     height: 100%;
-    padding: 51px 84px 48px 212px;
+    padding: 98px 32px 134px 88px;
     margin: auto;
   }
 
   .section-up {
-    width: 45%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
-    margin-right: 5vw;
    }
 
-   .img1 {
+   .img3 {
     width: 100%;
     height: 100%;
-    position: relative;
-    right: 0;
     padding: 0px;
     flex-shrink: 0;
   }
 
   .section-down {
-    width: 55%;
-    padding-top: 0;
+    box-sizing: border-box;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 4vh 0 0 6vw;
   }
 
-  .text-welcome{
-    box-sizing: border-box;
+  .section-down .text-header select {
+    width: 459px;
+    height: 52px;
+    margin-top: 10px;
+    background-size: 26px 12px;
+    background-position: left 14px center;
+    padding-left: 42px;
+    font-size: 27px;
+    border-radius: 20px; 
+  }
+
+
+  .section-down .text-box {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 42px;
   }
 
-  .text-welcome h1 {
-    box-sizing: border-box;
-    width: 100%;
-    height: 106px;
+  .section-down .text-box .choice-box {
+    padding-top: 17px;
   }
 
-  .text-welcome h2 {
-    font-size: 29px;
-    margin-top: 44px;
-    line-height: normal;
+  .section-down .btn-box {
+    width: 82%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    gap: 2vh;
   }
 
-  .btn-welcome button {
-    width: 41.4583%;
+  .section-down .btn-box button {
+    width: 199px;
     height: 36px;
-    margin-top: 66px;
-    border-radius: 35px;
-    font-size: 22px;
-  } 
+  }
+
+  .section-down .choice-box label{
+    line-height: 42px;
+  }
 }

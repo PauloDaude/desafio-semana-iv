@@ -11,7 +11,7 @@ a {
   text-decoration: none;
 }
 
-body {
+body, select, input {
   font-family: "Roboto", sans-serif;
 }
 
@@ -24,4 +24,16 @@ button {
   font-size: inherit;
   line-height: inherit;
   cursor: pointer;
+}
+
+input {
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+select {
+  appearance: none;
+  border: none;
+  outline: none;
 }

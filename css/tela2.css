@@ -10,7 +10,8 @@
 
   --color-text: #000000;
   --color-btn-text: #fff;
-  --color-btn-hover: #2ec959;
+  --color-btn-text-hover: #000;
+  --color-btn-hover: #FFFF7D;
   --color-primary: rgb(62, 178, 94);
   --color-secundary: rgba(62, 178, 94, 0.3);
   --color-tertiary: rgba(0, 0, 0, 0.25);
@@ -82,6 +83,7 @@ button {
 
 button:hover {
   background-color: var(--color-btn-hover);
+  color: var(--color-btn-text-hover);
   transition: all .2s ease;
 }
 
