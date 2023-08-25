@@ -320,7 +320,11 @@ input {
     background-position: left 14px center;
     padding-left: 42px;
     font-size: 27px;
-    border-radius: 20px; 
+    border-radius: 20px;
+  }
+
+  .section-down .text-header select:focus {
+    border-color: var(--color-primary)
   }
 
 

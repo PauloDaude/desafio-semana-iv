@@ -1,4 +1,4 @@
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, section * {
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, section, textarea * {
   margin: 0;
   padding: 0;
 }
@@ -11,7 +11,7 @@ a {
   text-decoration: none;
 }
 
-body, select, input {
+body, select, input, textarea {
   font-family: "Roboto", sans-serif;
 }
 
@@ -36,4 +36,9 @@ select {
   appearance: none;
   border: none;
   outline: none;
+}
+
+::selection {
+  background-color: #FFFF7D;
+  color: #000;
 }
