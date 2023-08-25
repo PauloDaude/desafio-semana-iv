@@ -27,7 +27,7 @@
   --line-height-content: 18.75px;
   --line-height-p: normal;
 
-  --width-height-ratio: 15px;
+  --width-height-checkbox: 13.818px;
 }
 
 /* ---------- TAG SELECTOR ---------- */
@@ -110,18 +110,18 @@ select option {
   font-size: var(--font-size-content);
 }
 
-input[type="radio"] {
+input[type="checkbox"] {
   background-color: var(--color-secundary);
   border: none;
-  border-radius: 50%;
-  width: var(--width-height-ratio);
-  height: var(--width-height-ratio);
+  border-radius: 2px;
+  width: var(--width-height-checkbox);
+  height: var(--width-height-checkbox);
   vertical-align: middle;
   transition: all .2s ease;
   margin-right: 2px;
 }
 
-input[type="radio"]:checked {
+input[type="checkbox"]:checked {
   background-color: var(--color-primary);
   transition: all .2s ease;
 }
@@ -156,8 +156,6 @@ input {
 }
 
  .section-up {
-  position: relative;
-  right: 16px;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -177,13 +175,12 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 19.96px 18vw 20.95px 18vw;
+  padding: 20.96px 18vw;
 }
 
 .section-down .text-header {
   box-sizing: border-box;
   width: 100%;
-
 }
 
 .section-down .text-box {
@@ -193,10 +190,11 @@ input {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 16px;
+  padding-top: 15px;
+  padding-right: 10vw;
 }
 
-.section-down .choice-box{
+.section-down .checkbox-box{
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -206,7 +204,7 @@ input {
   padding-top: 5px;
 }
 
-.section-down .choice-box label{
+.section-down .checkbox-box label{
   box-sizing: border-box;
   width: 100%;
   line-height: 21px;
@@ -259,7 +257,7 @@ input {
     font-size: 16px;
   }
 
-  .section-down .choice-box label{
+  .section-down .checkbox-box label{
     line-height: 26px;
   }
 
@@ -271,7 +269,7 @@ input {
     --font-size-h3: 1rem;
     --font-size-content: 1rem;
     --font-size-btn: 22px;
-    --width-height-ratio: 25px;
+    --width-height-checkbox: 26px;
   }
 
   html {
@@ -285,7 +283,7 @@ input {
     width: 100%;
     max-width: 1500px;
     height: 100%;
-    padding: 98px 0px 134px 80px;
+    padding: 98px 32px 134px 80px;
     margin: auto;
   }
 
@@ -309,16 +307,16 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 6.5vh 0 0 80px;
+    padding: 13.5vh 0 0 80px;
   }
 
   .section-down .text-header select {
     width: 459px;
     height: 52px;
-    margin-top: 10px;
+    margin-top: 16px;
     background-size: 26px 12px;
     background-position: left 14px center;
-    padding-left: 42px;
+    padding-left: 46px;
     font-size: 27px;
     border-radius: 20px; 
   }
@@ -330,11 +328,16 @@ input {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 42px;
+    padding: 24px 0 30px;
   }
 
-  .section-down .text-box .choice-box {
+  .section-down .text-box .checkbox-box {
     padding-top: 17px;
+  }
+
+  .section-down .text-box .checkbox-box input[type="checkbox"] {
+    border-radius: 5px;
+    margin-right: 14px;
   }
 
   .section-down .btn-box {
@@ -343,7 +346,7 @@ input {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 32px;
+    padding-top: 0px;
     gap: 2vh;
   }
 
@@ -352,7 +355,7 @@ input {
     height: 36px;
   }
 
-  .section-down .choice-box label{
-    line-height: 42px;
+  .section-down .checkbox-box label{
+    line-height: 40px;
   }
 }
