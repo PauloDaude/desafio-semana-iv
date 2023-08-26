@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/tela6.css">
+</head>
+
+<body>
+  <main class="main">
+    <section class="section-up">
+      <img src="/assets/svg/boneco-laptop4.svg" class="img5" alt="Homem no laptop sorrindo">
+    </section>
+    <section class="section-down">
+      <div class="text-box">
+        <form action="" class="form">
+          <label for="name">
+            <span>
+              Full Name:
+            </span>
+            <input name="name" id="name" type="text" autocomplete="name" placeholder="Nasses Toghiri" required>
+          </label>
+
+          <label for="email">
+            <span>
+              Email:
+            </span>
+            <input name="email" id="email" type="text" autocomplete="email" placeholder="N.Toghiri@Gmail.com" required>
+          </label>
+
+          <label for="age" class="input-age">
+            <span>
+              Age:
+            </span>
+            <input name="age" id="age" type="number" min="1" max="99" maxlength="2" oninput="limite(this)" placeholder="-- --" required>
+          </label>
+
+          <div class="btn-box">
+            <button>Back</button>
+            <input type="submit" id="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script>
+    function limite(input) {
+      input.value = input.value.replace(/\D/g, '').substr(0, 2);
+    }    
+  </script>
+</body>
+
+</html>
