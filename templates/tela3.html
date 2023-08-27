@@ -21,44 +21,47 @@
       <div class="text-header">
         <h3>Whats is the status of your account?</h3>
         <select name="dropdown" id="dropdown">
-          <option value="dropdown-option1">I have not created an account yet.</option>
-          <option value="dropdown-option2">I have an account created.</option>
-          <option value="dropdown-option3">I'm just a visitor.</option>
+          <option class="dropdown-default" value="" selected>Select an option below</option>
+          <option value="I have not created an account yet.">I have not created an account yet.</option>
+          <option value="I have an account created.">I have an account created.</option>
+          <option value="I'm just a visitor.">I'm just a visitor.</option>
         </select>
+        <p class="invalid-message" id="select-empty"></p>
       </div>
       <div class="text-box">
         <h3>In which financial markets do you operate?</h3>
         <div class="choice-box">
           <label for="choice-option1">
-            <input type="radio" id="choice-option1" name="choice" value="stock market">
+            <input type="radio" class="choice-radio" id="choice-option1" name="choice" value="stock market">
             stock market
           </label>
   
           <label for="choice-option2">
-            <input type="radio" id="choice-option2" name="choice" value="foreign exchange">
+            <input type="radio" class="choice-radio" id="choice-option2" name="choice" value="foreign exchange">
             foreign exchange
           </label>
   
           <label for="choice-option3">
-            <input type="radio" id="choice-option3" name="choice" value="commodity">
+            <input type="radio" class="choice-radio" id="choice-option3" name="choice" value="commodity">
             commodity
           </label>
   
           <label for="choice-option4">
-            <input type="radio" id="choice-option4" name="choice" value="bond market">
+            <input type="radio" class="choice-radio" id="choice-option4" name="choice" value="bond market">
             bond market
           </label>
   
           <label for="choice-option5">
-            <input type="radio" id="choice-option5" name="choice" value="cryptocurrency market">
+            <input type="radio" class="choice-radio" id="choice-option5" name="choice" value="cryptocurrency market">
             cryptocurrency market
           </label>
+        <p class="invalid-message" id="choice-empty"></p>
         </div>
       </div>
       <div class="btn-box">
         <button onclick="previousScreen()">Back</button>
-        <button onclick="nextScreen()">Next</button>
-        <button class="skip">Skip</button>
+        <button onclick="nextScreen(this)">Next</button>
+        <button class="skip" onclick="nextScreen(this)">Skip</button>
       </div>
     </section>
   </main>

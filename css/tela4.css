@@ -96,6 +96,7 @@ select {
   background-position: left 10px center;
   background-repeat: no-repeat;
   border: 1px solid var(--color-tertiary);
+  transition: all .3s ease;
   border-radius: 20px;
   padding: 5px 10px 5px 25px;
   margin: 3px;
@@ -105,6 +106,10 @@ select {
   word-break: break-all;
 }
 
+select:focus {
+  border-color: var(--color-primary);
+  transition: all .3s ease;
+}
 
 select option {
   font-size: var(--font-size-content);
@@ -234,6 +239,10 @@ input {
   margin-top: 27.88px;
   line-height: normal;
   text-align: center;
+}
+
+.dropdown-default {
+  display: none;
 }
 
 /* ---------- /CLASS SELECTOR ---------- */

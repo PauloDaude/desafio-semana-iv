@@ -21,10 +21,12 @@
       <div class="text-header">
         <h3>How do you decide to invest?</h3>
         <select name="dropdown" id="dropdown">
-          <option value="dropdown-option1">I have not invest yet.</option>
-          <option value="dropdown-option2">I have an investment done.</option>
-          <option value="dropdown-option3">I'm searching for a investment.</option>
+          <option class="dropdown-default" value="" selected>Select an option below</option>
+          <option value="I have not invest yet.">I have not invest yet.</option>
+          <option value="I have an investment done.">I have an investment done.</option>
+          <option value="I'm searching for a investment.">I'm searching for a investment.</option>
         </select>
+        <p class="invalid-message"></p>
       </div>
       <div class="text-box">
         <h3>What resources have you used or are you using for your training?</h3>
@@ -52,8 +54,8 @@
       </div>
       <div class="btn-box">
         <button onclick="previousScreen()">Back</button>
-        <button onclick="nextScreen()">Next</button>
-        <button class="skip">Skip</button>
+        <button onclick="nextScreen(this)">Next</button>
+        <button class="skip" onclick="nextScreen(this)">Skip</button>
       </div>
     </section>
   </main>

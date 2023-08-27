@@ -23,10 +23,13 @@ button, input {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  cursor: pointer;
   appearance: none;
   border: none;
   outline: none;
+}
+
+button, input[type="submit"] {
+  cursor: pointer;
 }
 
 select {
@@ -38,4 +41,10 @@ select {
 ::selection {
   background-color: #FFFF7D;
   color: #000;
+}
+
+.invalid-message {
+  color: rgb(255, 85, 85);
+  font-size: calc(var(--font-size-content) - 3px);
+  margin-left: 5px;
 }
