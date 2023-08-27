@@ -7,7 +7,7 @@ function nextScreen(button) {
   }
 
   if (button.textContent === 'Next') {
-    if (!(validationSelect(actualFile) && validationRadio(actualFile))) {
+    if (!(validationSelect(actualFile) && validationRadio(actualFile) && validationCheckbox(actualFile))) {
       isValid = false
     }
   }
@@ -61,6 +61,34 @@ function validationRadio(actualFile) {
     return false
   }
   return true;
+}
+
+function validationCheckbox(actualFile) {
+  if (actualFile[1] === '4') {
+    const invalidMessage = document.querySelector('#checkbox-empty')
+
+    const checkboxOptions = document.getElementsByClassName('choice-checkbox')
+    const options = [...checkboxOptions]
+    let chosenOptions = [];
+
+    options.forEach(option => {
+      if (option.checked) {
+        chosenOptions.push(option.value)}
+    })
+
+    // console.log(chosenOptions)
+    if (chosenOptions.length > 0) {
+      localStorage.setItem('trainingResource', chosenOptions)
+
+      invalidMessage.innerHTML = null
+      return true
+    }
+
+    invalidMessage.innerHTML = "*Choose one or more options"
+    return false
+  }
+
+  return true
 }
 
 function previousScreen() {

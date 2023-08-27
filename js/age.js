@@ -1,8 +1,8 @@
 function limite(input) {
-  var countValue = '';
-  var inputValue = input.value;
+  let countValue = '';
+  let inputValue = input.value;
 
-  for (var i = 0; i < inputValue.length; i++) {
+  for (let i = 0; i < inputValue.length; i++) {
     if (!isNaN(inputValue[i])) { // o !isNaN() significa se caso for número
       countValue += inputValue[i];
     }
