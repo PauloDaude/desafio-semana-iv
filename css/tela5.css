@@ -201,6 +201,18 @@ input {
   text-align: center;
 }
 
+#word-length {
+  font-size: calc(var(--font-size-content) - 4px);
+  font-style: italic;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: var(--color-primary)
+}
+
+#textarea-empty {
+  margin-top: 4px;
+}
+
 /* ---------- /CLASS SELECTOR ---------- */
 
 
@@ -305,5 +317,9 @@ input {
   .section-down .btn-box button {
     width: 199px;
     height: 36px;
+  }
+
+  #word-length {
+    font-size: calc(var(--font-size-content) - 8px);
   }
 }

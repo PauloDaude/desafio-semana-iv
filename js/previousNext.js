@@ -7,7 +7,14 @@ function nextScreen(button) {
   }
 
   if (button.textContent === 'Next') {
-    if (!(validationSelect(actualFile) && validationRadio(actualFile) && validationCheckbox(actualFile))) {
+    if (
+      !(
+        validationSelect(actualFile) &&
+        validationRadio(actualFile) &&
+        validationCheckbox(actualFile) &&
+        validationTextarea(actualFile)
+      )
+    ) {
       isValid = false
     }
   }
@@ -44,7 +51,7 @@ function validationRadio(actualFile) {
 
     const ratioOptions = document.getElementsByClassName('choice-radio')
     const options = [...ratioOptions]
-    let chosenOption;
+    let chosenOption
 
     options.forEach(option => {
       if (option.checked) chosenOption = option.value
@@ -52,7 +59,7 @@ function validationRadio(actualFile) {
 
     if (chosenOption) {
       localStorage.setItem('financialMarkets', chosenOption)
-    
+
       invalidMessage.innerHTML = null
       return true
     }
@@ -60,7 +67,7 @@ function validationRadio(actualFile) {
     invalidMessage.innerHTML = '*Choose an option to continue'
     return false
   }
-  return true;
+  return true
 }
 
 function validationCheckbox(actualFile) {
@@ -69,11 +76,12 @@ function validationCheckbox(actualFile) {
 
     const checkboxOptions = document.getElementsByClassName('choice-checkbox')
     const options = [...checkboxOptions]
-    let chosenOptions = [];
+    let chosenOptions = []
 
     options.forEach(option => {
       if (option.checked) {
-        chosenOptions.push(option.value)}
+        chosenOptions.push(option.value)
+      }
     })
 
     // console.log(chosenOptions)
@@ -84,11 +92,59 @@ function validationCheckbox(actualFile) {
       return true
     }
 
-    invalidMessage.innerHTML = "*Choose one or more options"
+    invalidMessage.innerHTML = '*Choose one or more options'
     return false
   }
 
   return true
+}
+
+function validationTextarea(actualFile) {
+  if (actualFile[1] === '5') {
+    const invalidMessage = document.querySelector('#textarea-empty') 
+
+    const textArea = document.getElementById('text-area').value
+
+    if (textArea) {
+      if (textArea.length <= 130) {
+
+        invalidMessage.innerHTML = null
+        return true
+      } 
+      else {
+        invalidMessage.innerHTML = "*The limit has been exceeded"
+        return false
+      }
+    }
+
+    invalidMessage.innerHTML = "*Enter some text in the field"
+    return false
+  }
+  return true
+}
+
+function wordLength(event, text) {
+  let cont = text.length
+
+  if (event.keyCode === 8) {
+    cont--
+  } else if (text.length >= 0) {
+    cont++
+  }
+
+  const textLength = document.getElementById('word-length')
+  cont > 0 ? textLength.innerHTML = cont + '/130' : textLength.innerHTML = null
+
+  const invalidMessage = document.querySelector('#textarea-empty')
+  if (cont > 130) {
+   textLength.style.color = 'red'
+  }
+  else {
+    invalidMessage.innerHTML = null
+    textLength.style.color = 'rgb(62, 178, 94)'
+  }
+
+
 }
 
 function previousScreen() {
