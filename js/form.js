@@ -5,25 +5,12 @@ let isValid = true
 
 form.addEventListener('submit', event => {
   event.preventDefault()
-
   const nameFull = document.getElementById('name-full').value
   const email = document.getElementById('email').value
   const age = document.getElementById('age').value
 
-  if (nameFull.split(' ').length < 2) {
-    incompleteName.innerHTML = '*Please type your full name'
+  if (!(validationNameFull(nameFull) && validationEmail(email))) {
     isValid = false
-  } else {
-    incompleteName.innerHTML = null
-    isValid = true
-  }
-
-  if (email.includes('@') === false || email.split('@')[1] === '') {
-    invalidEmail.innerHTML = '*Please type your correct email address'
-    isValid = false
-  } else {
-    invalidEmail.innerHTML = null
-    isValid = true
   }
 
   if (isValid) {
@@ -35,7 +22,7 @@ form.addEventListener('submit', event => {
   }
 })
 
-function limite(input) {
+function limit(input) {
   let countValue = ''
   let inputValue = input.value
 
@@ -50,4 +37,22 @@ function limite(input) {
   }
 
   input.value = countValue
+}
+
+function validationNameFull(nameFull) {
+  if (nameFull.split(' ').length < 2) {
+    incompleteName.innerHTML = '*Please type your full name'
+    return false
+  }
+  incompleteName.innerHTML = null
+  return true
+}
+
+function validationEmail(email) {
+  if (email.includes('@') === false || email.split('@')[1] === '') {
+    invalidEmail.innerHTML = '*Please type your correct email address'
+    return false
+  }
+  invalidEmail.innerHTML = null
+  return true
 }
