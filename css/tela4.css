@@ -5,27 +5,12 @@
   --font-size-btn: 1rem;
   --font-size-content: 1rem;
 
-  --font-weight-title: 700;
-  --font-weight-content: 400;
-
-  --color-text: #000000;
-  --color-btn-text: #fff;
-  --color-btn-text-hover: #000;
-  --color-btn-hover: #FFFF7D;
-  --color-primary: rgb(62, 178, 94);
-  --color-secundary: rgba(62, 178, 94, 0.3);
-  --color-tertiary: rgba(0, 0, 0, 0.25);
-
   --radius-btn: 35px;
   --radius-toggle-options: 20px;
   --radius-text-area: 20px;
   --radius-select-box: 2px;
 
-  --line-height-h2: normal;
-  --line-height-h3: normal;
-  --line-height-btn: normal;
   --line-height-content: 18.75px;
-  --line-height-p: normal;
 
   --width-height-checkbox: 13.818px;
 }
@@ -35,138 +20,15 @@ html {
   font-size: 16px;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: var(--font-weight-title);
-  color: var(--color-text);
-}
-
-h1 {
-  font-size: var(--font-size-h1);
-  line-height: normal;
-}
-
-h2 {
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-h2);
-}
-
-h3 {
-  font-size: var(--font-size-h3);
-  line-height: var(--line-height-h3);
-}
-
-p {
-  font-size: var(--font-size-content);
-  font-weight: var(--font-weight-content);
-  line-height: var(--line-height-p);
-  color: var(--color-text)
-}
-
 button {
-  font-size: var(--font-size-btn);
-  font-weight: var(--font-weight-title);
-  color: var(--color-btn-text);
-  background-color: var(--color-primary);
-  border-radius: var(--radius-btn);
   width: 29.5833vw;
   height: 26px;
-  transition: all .2s ease;
-}
-
-button:hover {
-  background-color: var(--color-btn-hover);
-  color: var(--color-btn-text-hover);
-  transition: all .2s ease;
-}
-
-select {
-  position: relative;
-  right: 8px;
-  background-image: url(../assets/svg/arrow.svg);
-  background-position: left 10px center;
-  background-repeat: no-repeat;
-  border: 1px solid var(--color-tertiary);
-  transition: all .3s ease;
-  border-radius: 20px;
-  padding: 5px 10px 5px 25px;
-  margin: 3px;
-  font-size: var(--font-size-content);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  word-break: break-all;
-}
-
-select:focus {
-  border-color: var(--color-primary);
-  transition: all .3s ease;
-}
-
-select option {
-  font-size: var(--font-size-content);
-}
-
-input[type="checkbox"] {
-  background-color: var(--color-secundary);
-  border: none;
-  border-radius: 2px;
-  width: var(--width-height-checkbox);
-  height: var(--width-height-checkbox);
-  vertical-align: middle;
-  transition: all .2s ease;
-  margin-right: 2px;
-}
-
-input[type="checkbox"]:checked {
-  background-color: var(--color-primary);
-  transition: all .2s ease;
-}
-
-textarea {
-  width: 278px;
-  height: 131px;
-  overflow: hidden;
-  background-color: transparent;
-  border: 1px solid var(--color-tertiary);
-}
-
-label {
-  font-size: var(--font-size-content);
-  color: var(--color-text);
-  line-height: var(--line-height-content);
-}
-
-input {
-  background-color: transparent;
-  border: 1px solid var(--color-tertiary);
 }
 
 /* ---------- /TAG SELECTOR ---------- */
 
 
 /* ---------- CLASS SELECTOR ---------- */
-.main {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.section-up {
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .img3 {
   width: 75%;
   height: 45.2631%;
@@ -213,7 +75,6 @@ input {
   box-sizing: border-box;
   width: 100%;
   line-height: 21px;
-  font-size: var(--font-size-content);
 }
 
 .section-down .btn-box {
@@ -235,9 +96,7 @@ input {
 }
 
 .text-box h2 {
-  font-size: var(--font-size-h2);
   margin-top: 27.88px;
-  line-height: normal;
   text-align: center;
 }
 
@@ -328,10 +187,6 @@ input {
     padding-left: 46px;
     font-size: 27px;
     border-radius: 20px;
-  }
-
-  .section-down .text-header select:focus {
-    border-color: var(--color-primary)
   }
 
   .section-down .text-box {

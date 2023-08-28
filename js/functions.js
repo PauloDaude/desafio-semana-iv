@@ -27,11 +27,7 @@ function nextScreen(button) {
 
   if (isValid) {
     const nextFile = actualFile[0] + (+actualFile.pop() + 1)
-    if (document.title === 'Success') {
-      window.location.href = './tela1.html'
-    } else {
       window.location.href = './' + nextFile + '.html'
-    }
   }
 }
 

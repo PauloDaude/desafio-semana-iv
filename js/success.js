@@ -19,3 +19,10 @@ keys.forEach(key => {
     console.log(`${key}: ${value}`)
   }
 })
+
+function success() {
+  if (document.title === 'Success') {
+    localStorage.clear()
+    window.location.href = './tela1.html'
+  }
+}
