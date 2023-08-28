@@ -19,12 +19,13 @@
     </section>
     <section class="section-down">
       <div class="text-box">
-        <form action="" class="form">
+        <form class="form" id="form">
           <label for="name">
             <span>
               Full Name:
             </span>
-            <input name="name" id="name" type="text" autocomplete="name" placeholder="Nasses Toghiri" required>
+            <input name="name" id="name-full" type="text" autocomplete="name" placeholder="Nasses Toghiri" required>
+            <p class="invalid-message" id="incomplete-name"></p>
           </label>
 
           <label for="email">
@@ -32,13 +33,15 @@
               Email:
             </span>
             <input name="email" id="email" type="text" autocomplete="email" placeholder="N.Toghiri@Gmail.com" required>
+            <p class="invalid-message" id="invalid-email"></p>
           </label>
 
           <label for="age" class="input-age">
             <span>
               Age:
             </span>
-            <input name="age" id="age" type="number" min="1" max="99" maxlength="2" oninput="limite(this)" placeholder="-- --" required>
+            <input name="age" id="age" type="number" min="1" max="99" maxlength="2" oninput="limite(this)"
+              placeholder="-- --" required>
           </label>
 
           <div class="btn-box">
@@ -50,6 +53,7 @@
     </section>
   </main>
   <script src="../js/age.js"></script>
+  <script src="../js/form.js"></script>
   <script src="../js/previousNext.js"></script>
 </body>
 

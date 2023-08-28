@@ -1,9 +1,22 @@
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, section, textarea * {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+section,
+textarea * {
   margin: 0;
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -11,11 +24,15 @@ a {
   text-decoration: none;
 }
 
-body, select, input, textarea {
+body,
+select,
+input,
+textarea {
   font-family: "Roboto", sans-serif;
 }
 
-button, input {
+button,
+input {
   margin: 0;
   padding: 0;
   border: none;
@@ -24,7 +41,8 @@ button, input {
   outline: none;
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
   cursor: pointer;
 }
 

@@ -160,19 +160,19 @@ input {
   box-sizing: border-box;
 }
 
- .section-up {
+.section-up {
   box-sizing: border-box;
   width: 100%;
   display: flex;
   justify-content: center;
- }
+}
 
- .img3 {
+.img3 {
   width: 75%;
   height: 45.2631%;
   padding-top: 61px;
   flex-shrink: 0;
-} 
+}
 
 .section-down {
   box-sizing: border-box;
@@ -199,7 +199,7 @@ input {
   padding-right: 10vw;
 }
 
-.section-down .checkbox-box{
+.section-down .checkbox-box {
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -209,7 +209,7 @@ input {
   padding-top: 5px;
 }
 
-.section-down .checkbox-box label{
+.section-down .checkbox-box label {
   box-sizing: border-box;
   width: 100%;
   line-height: 21px;
@@ -259,14 +259,14 @@ input {
     position: relative;
     right: 8vw;
     width: 50%;
-  } 
+  }
 
   .section-down .btn-box button {
     height: 32px;
     font-size: 16px;
   }
 
-  .section-down .checkbox-box label{
+  .section-down .checkbox-box label {
     line-height: 26px;
   }
 
@@ -301,9 +301,9 @@ input {
     height: 100%;
     display: flex;
     justify-content: center;
-   }
+  }
 
-   .img3 {
+  .img3 {
     width: 100%;
     height: 100%;
     padding: 0px;
@@ -327,7 +327,7 @@ input {
     background-position: left 14px center;
     padding-left: 46px;
     font-size: 27px;
-    border-radius: 20px; 
+    border-radius: 20px;
   }
 
   .section-down .text-header select:focus {
@@ -367,7 +367,7 @@ input {
     height: 36px;
   }
 
-  .section-down .checkbox-box label{
+  .section-down .checkbox-box label {
     line-height: 40px;
   }
 }

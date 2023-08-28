@@ -1,3 +1,9 @@
+function previousScreen() {
+  const actualFile = document.title.toLowerCase().split(' ')
+  const previousFile = actualFile[0] + (+actualFile.pop() - 1)
+  window.location.href = './' + previousFile + '.html'
+}
+
 function nextScreen(button) {
   let isValid = true
 
@@ -21,7 +27,11 @@ function nextScreen(button) {
 
   if (isValid) {
     const nextFile = actualFile[0] + (+actualFile.pop() + 1)
-    window.location.href = './' + nextFile + '.html'
+    if (document.title === 'Success') {
+      window.location.href = './tela1.html'
+    } else {
+      window.location.href = './' + nextFile + '.html'
+    }
   }
 }
 
@@ -101,23 +111,23 @@ function validationCheckbox(actualFile) {
 
 function validationTextarea(actualFile) {
   if (actualFile[1] === '5') {
-    const invalidMessage = document.querySelector('#textarea-empty') 
+    const invalidMessage = document.querySelector('#textarea-empty')
 
     const textArea = document.getElementById('text-area').value
 
     if (textArea) {
       if (textArea.length <= 130) {
+        localStorage.setItem('investmentLoss', textArea)
 
         invalidMessage.innerHTML = null
         return true
-      } 
-      else {
-        invalidMessage.innerHTML = "*The limit has been exceeded"
+      } else {
+        invalidMessage.innerHTML = '*The limit has been exceeded'
         return false
       }
     }
 
-    invalidMessage.innerHTML = "*Enter some text in the field"
+    invalidMessage.innerHTML = '*Enter some text in the field'
     return false
   }
   return true
@@ -133,22 +143,17 @@ function wordLength(event, text) {
   }
 
   const textLength = document.getElementById('word-length')
-  cont > 0 ? textLength.innerHTML = cont + '/130' : textLength.innerHTML = null
+  if (cont > 0) {
+    textLength.innerHTML = cont + '/130'
+  } else {
+    textLength.innerHTML = null
+  }
 
   const invalidMessage = document.querySelector('#textarea-empty')
   if (cont > 130) {
-   textLength.style.color = 'red'
-  }
-  else {
+    textLength.style.color = 'red'
+  } else {
     invalidMessage.innerHTML = null
     textLength.style.color = 'rgb(62, 178, 94)'
   }
-
-
-}
-
-function previousScreen() {
-  const actualFile = document.title.toLowerCase().split(' ')
-  const previousFile = actualFile[0] + (+actualFile.pop() - 1)
-  window.location.href = './' + previousFile + '.html'
 }
